@@ -1,0 +1,41 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- 窗口标题与通用 -->
+    <sys:String x:Key="AppTitle">倒数日清单</sys:String>
+    <sys:String x:Key="DefaultEventTitle">默认倒数日</sys:String>
+    <sys:String x:Key="NewEventTitle">新倒数日</sys:String>
+    <sys:String x:Key="DeadlinePrefix">截止: </sys:String>
+    <sys:String x:Key="WorkDaysPrefix">工作日: </sys:String>
+    <sys:String x:Key="DaysSuffix">天</sys:String>
+    <sys:String x:Key="PinToolTip">固定在最顶层</sys:String>
+    <sys:String x:Key="UnpinToolTip">取消置顶</sys:String>
+
+    <!-- 右键菜单 -->
+    <sys:String x:Key="MenuAdd">➕  添加新事件</sys:String>
+    <sys:String x:Key="MenuOpacity">🎨  调整透明度</sys:String>
+    <sys:String x:Key="MenuLanguage">🌐  语言 / Language</sys:String>
+    <sys:String x:Key="MenuTaskbarOn">📌  在任务栏显示图标 (已开启)</sys:String>
+    <sys:String x:Key="MenuTaskbarOff">📌  在任务栏显示图标 (已隐藏)</sys:String>
+    <sys:String x:Key="MenuClearOld">🧹  清空已到期事件</sys:String>
+    <sys:String x:Key="MenuExit">❌  退出</sys:String>
+    <sys:String x:Key="MenuEditCard">✏️  修改此事件</sys:String>
+    <sys:String x:Key="MenuDeleteCard">🗑️  删除此事件</sys:String>
+
+    <!-- 编辑弹窗 -->
+    <sys:String x:Key="EditWindowTitle">设置倒数日事件</sys:String>
+    <sys:String x:Key="EditEventName">事件名称</sys:String>
+    <sys:String x:Key="EditTargetDate">目标日期</sys:String>
+    <sys:String x:Key="BtnSave">保存</sys:String>
+    <sys:String x:Key="BtnCancel">取消</sys:String>
+    <sys:String x:Key="MsgEmptyTitle">事件名称不能为空！</sys:String>
+    <sys:String x:Key="MsgEmptyDate">请选择目标日期！</sys:String>
+    <sys:String x:Key="MsgPrompt">提示</sys:String>
+
+    <!-- 透明度弹窗 -->
+    <sys:String x:Key="OpacityTitle">透明度设置</sys:String>
+    <sys:String x:Key="BgOpacityLabel">背景透明度</sys:String>
+    <sys:String x:Key="TextOpacityLabel">文字/内容透明度</sys:String>
+    <sys:String x:Key="BtnOk">完成</sys:String>
+</ResourceDictionary>

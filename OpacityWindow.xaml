@@ -1,0 +1,69 @@
+<Window x:Class="CountdownDay.OpacityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource OpacityTitle}" Height="240" Width="300"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        MouseDown="Window_MouseDown">
+
+    <Border CornerRadius="16" Background="#252526" BorderBrush="#3F3F46" BorderThickness="1" Padding="18" Margin="10">
+        <Border.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="16" ShadowDepth="4" Opacity="0.5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="{DynamicResource OpacityTitle}" Foreground="#FFFFFF" FontSize="15" FontWeight="Bold" Margin="0,0,0,14"/>
+
+            <StackPanel Grid.Row="1" Margin="0,0,0,12">
+                <TextBlock Text="{DynamicResource BgOpacityLabel}" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Slider x:Name="SldBgOpacity" Grid.Column="0" Minimum="0" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True"
+                            ValueChanged="SldBgOpacity_ValueChanged" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox x:Name="TxtBgOpacity" Grid.Column="1" Width="40" Background="#1E1E1E" Foreground="#FFFFFF"
+                             BorderBrush="#3F3F46" BorderThickness="1" Padding="4,2" FontSize="12" TextAlignment="Center"
+                             TextChanged="TxtBgOpacity_TextChanged"/>
+                    <TextBlock Grid.Column="2" Text="%" Foreground="#AAAAAA" FontSize="12" VerticalAlignment="Center" Margin="4,0,0,0"/>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="{DynamicResource TextOpacityLabel}" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Slider x:Name="SldTextOpacity" Grid.Column="0" Minimum="20" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True"
+                            ValueChanged="SldTextOpacity_ValueChanged" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox x:Name="TxtTextOpacity" Grid.Column="1" Width="40" Background="#1E1E1E" Foreground="#FFFFFF"
+                             BorderBrush="#3F3F46" BorderThickness="1" Padding="4,2" FontSize="12" TextAlignment="Center"
+                             TextChanged="TxtTextOpacity_TextChanged"/>
+                    <TextBlock Grid.Column="2" Text="%" Foreground="#AAAAAA" FontSize="12" VerticalAlignment="Center" Margin="4,0,0,0"/>
+                </Grid>
+            </StackPanel>
+
+            <Button Grid.Row="4" Content="{DynamicResource BtnOk}" Click="BtnOk_Click" Width="72" Height="28" HorizontalAlignment="Right"
+                    Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" FontWeight="Bold" Cursor="Hand">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

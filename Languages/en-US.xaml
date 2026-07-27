@@ -1,0 +1,41 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Title & General -->
+    <sys:String x:Key="AppTitle">Countdown List</sys:String>
+    <sys:String x:Key="DefaultEventTitle">Default Countdown</sys:String>
+    <sys:String x:Key="NewEventTitle">New Event</sys:String>
+    <sys:String x:Key="DeadlinePrefix">Due: </sys:String>
+    <sys:String x:Key="WorkDaysPrefix">Workdays: </sys:String>
+    <sys:String x:Key="DaysSuffix">days</sys:String>
+    <sys:String x:Key="PinToolTip">Pin on top</sys:String>
+    <sys:String x:Key="UnpinToolTip">Unpin from top</sys:String>
+
+    <!-- Context Menu -->
+    <sys:String x:Key="MenuAdd">➕  Add New Event</sys:String>
+    <sys:String x:Key="MenuOpacity">🎨  Adjust Transparency</sys:String>
+    <sys:String x:Key="MenuLanguage">🌐  Language / 语言</sys:String>
+    <sys:String x:Key="MenuTaskbarOn">📌  Show in Taskbar (On)</sys:String>
+    <sys:String x:Key="MenuTaskbarOff">📌  Show in Taskbar (Off)</sys:String>
+    <sys:String x:Key="MenuClearOld">🧹  Clear Expired Events</sys:String>
+    <sys:String x:Key="MenuExit">❌  Exit</sys:String>
+    <sys:String x:Key="MenuEditCard">✏️  Edit Event</sys:String>
+    <sys:String x:Key="MenuDeleteCard">🗑️  Delete Event</sys:String>
+
+    <!-- Edit Window -->
+    <sys:String x:Key="EditWindowTitle">Edit Countdown Event</sys:String>
+    <sys:String x:Key="EditEventName">Event Title</sys:String>
+    <sys:String x:Key="EditTargetDate">Target Date</sys:String>
+    <sys:String x:Key="BtnSave">Save</sys:String>
+    <sys:String x:Key="BtnCancel">Cancel</sys:String>
+    <sys:String x:Key="MsgEmptyTitle">Event title cannot be empty!</sys:String>
+    <sys:String x:Key="MsgEmptyDate">Please select a target date!</sys:String>
+    <sys:String x:Key="MsgPrompt">Notice</sys:String>
+
+    <!-- Opacity Window -->
+    <sys:String x:Key="OpacityTitle">Transparency Settings</sys:String>
+    <sys:String x:Key="BgOpacityLabel">Background Opacity</sys:String>
+    <sys:String x:Key="TextOpacityLabel">Text / Content Opacity</sys:String>
+    <sys:String x:Key="BtnOk">Done</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,81 @@
+<Window x:Class="CountdownDay.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource EditWindowTitle}" Height="260" Width="320"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <Style TargetType="DatePickerTextBox">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DatePickerTextBox">
+                        <TextBox x:Name="PART_TextBox" Text="{TemplateBinding Text}"
+                                 Foreground="#FFFFFF" Background="#1E1E1E"
+                                 BorderThickness="0" VerticalAlignment="Center"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border CornerRadius="16" Background="#252526" BorderBrush="#3F3F46" BorderThickness="1" Padding="20" Margin="10">
+        <Border.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="16" ShadowDepth="4" Opacity="0.5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="{DynamicResource EditWindowTitle}" Foreground="#FFFFFF" FontSize="16" FontWeight="Bold" Margin="0,0,0,16"/>
+
+            <StackPanel Grid.Row="1" Margin="0,0,0,14">
+                <TextBlock Text="{DynamicResource EditEventName}" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,6"/>
+                <TextBox x:Name="TxtTitle" Background="#1E1E1E" Foreground="#FFFFFF" 
+                         BorderBrush="#3F3F46" BorderThickness="1" Padding="8,6" FontSize="13">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="{DynamicResource EditTargetDate}" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,6"/>
+                <Border Background="#1E1E1E" BorderBrush="#3F3F46" BorderThickness="1" CornerRadius="6" Padding="4">
+                    <DatePicker x:Name="DpTargetDate" Background="Transparent" Foreground="#FFFFFF" BorderThickness="0" FontSize="13"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+                <Button Content="{DynamicResource BtnCancel}" Click="BtnCancel_Click" Width="72" Height="30" 
+                        Background="#3E3E42" Foreground="#FFFFFF" BorderThickness="0" Margin="0,0,10,0" Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="{DynamicResource BtnSave}" Click="BtnSave_Click" Width="72" Height="30" 
+                        Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" FontWeight="Bold" Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
